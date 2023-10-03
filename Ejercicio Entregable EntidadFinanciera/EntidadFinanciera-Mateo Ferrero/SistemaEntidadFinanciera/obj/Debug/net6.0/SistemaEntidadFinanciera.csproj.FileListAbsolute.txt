@@ -1,0 +1,5 @@
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\obj\Debug\net6.0\SistemaEntidadFinanciera.csproj.AssemblyReference.cache
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\obj\Debug\net6.0\SistemaEntidadFinanciera.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\obj\Debug\net6.0\SistemaEntidadFinanciera.AssemblyInfoInputs.cache
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\obj\Debug\net6.0\SistemaEntidadFinanciera.AssemblyInfo.cs
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\obj\Debug\net6.0\SistemaEntidadFinanciera.csproj.CoreCompileInputs.cache

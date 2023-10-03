@@ -1,7 +1,0 @@
-C:\Users\mateo\source\repos\EntidadFinancieraForm\obj\Debug\net6.0-windows\EntidadFinancieraForm.csproj.AssemblyReference.cache
-C:\Users\mateo\source\repos\EntidadFinancieraForm\obj\Debug\net6.0-windows\EntidadFinancieraForm.Form1.resources
-C:\Users\mateo\source\repos\EntidadFinancieraForm\obj\Debug\net6.0-windows\EntidadFinancieraForm.csproj.GenerateResource.cache
-C:\Users\mateo\source\repos\EntidadFinancieraForm\obj\Debug\net6.0-windows\EntidadFinancieraForm.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\mateo\source\repos\EntidadFinancieraForm\obj\Debug\net6.0-windows\EntidadFinancieraForm.AssemblyInfoInputs.cache
-C:\Users\mateo\source\repos\EntidadFinancieraForm\obj\Debug\net6.0-windows\EntidadFinancieraForm.AssemblyInfo.cs
-C:\Users\mateo\source\repos\EntidadFinancieraForm\obj\Debug\net6.0-windows\EntidadFinancieraForm.csproj.CoreCompileInputs.cache

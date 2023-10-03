@@ -1,0 +1,14 @@
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\obj\Debug\net6.0\SistemaEntidadFinanciera.csproj.AssemblyReference.cache
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\obj\Debug\net6.0\SistemaEntidadFinanciera.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\obj\Debug\net6.0\SistemaEntidadFinanciera.AssemblyInfoInputs.cache
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\obj\Debug\net6.0\SistemaEntidadFinanciera.AssemblyInfo.cs
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\obj\Debug\net6.0\SistemaEntidadFinanciera.csproj.CoreCompileInputs.cache
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\bin\Debug\net6.0\SistemaEntidadFinanciera.deps.json
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\bin\Debug\net6.0\SistemaEntidadFinanciera.runtimeconfig.json
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\bin\Debug\net6.0\SistemaEntidadFinanciera.dll
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\bin\Debug\net6.0\SistemaEntidadFinanciera.pdb
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\obj\Debug\net6.0\SistemaEntidadFinanciera.dll
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\obj\Debug\net6.0\refint\SistemaEntidadFinanciera.dll
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\obj\Debug\net6.0\SistemaEntidadFinanciera.pdb
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\obj\Debug\net6.0\SistemaEntidadFinanciera.genruntimeconfig.cache
+C:\Users\mateo\source\repos\SistemaEntidadFinanciera\obj\Debug\net6.0\ref\SistemaEntidadFinanciera.dll
