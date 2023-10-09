@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cw0dsSeJhH6g1X4l7xpBOhTP+DSbBNOkd/ZpoIL2kTgnWSZyfB9EynX/SRK3LKUF+htBb/8uzNqcbVUesQVADQ==",
+  "dgSpecHash": "MuBM2fdGkFumXMAFPGodJ5g/f9JQcaXCaC5ohJ8qphiEdi7xSdday9GlX3KJuDziZW0hI6T0rjUQjEJzOhPffA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mateo\\source\\repos\\SistemaEntidadFinanciera\\SistemaEntidadFinanciera.csproj",
+  "projectFilePath": "C:\\Users\\mateo\\OneDrive\\Documentos\\GitHub\\Programacion-1-M.Ferrero\\Ejercicio Entregable EntidadFinanciera\\SistemaEntidadFinanciera\\SistemaEntidadFinanciera.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mateo\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\mateo\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

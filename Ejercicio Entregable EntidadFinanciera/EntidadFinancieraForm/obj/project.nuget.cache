@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6lLNU0wBX1ij9ZOL5eAG+jLNIok3k2pKNeKyNcbNJAqu5fNtbcbq187ZoF+eAbkyO3ta1J+vQOKys66uRr9hNA==",
+  "dgSpecHash": "ZHiw3ZG/Z4B9afEf9Y4O73q8090HNgFluGRXc6+mRlagL0vS1xu+bTItDN7XSOO3KPDbgyj+ukKB8gPUR87aig==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mateo\\source\\repos\\EntidadFinancieraForm\\EntidadFinancieraForm.csproj",
+  "projectFilePath": "C:\\Users\\mateo\\OneDrive\\Documentos\\GitHub\\Programacion-1-M.Ferrero\\Ejercicio Entregable EntidadFinanciera\\EntidadFinancieraForm\\EntidadFinancieraForm.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mateo\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\mateo\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

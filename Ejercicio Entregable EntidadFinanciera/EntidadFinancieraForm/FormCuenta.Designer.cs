@@ -36,6 +36,8 @@
             buttonGuardarCuenta = new Button();
             label4 = new Label();
             cboTipoCuenta = new ComboBox();
+            dataGridViewCuentas = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCuentas).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -111,11 +113,22 @@
             cboTipoCuenta.Size = new Size(192, 23);
             cboTipoCuenta.TabIndex = 8;
             // 
+            // dataGridViewCuentas
+            // 
+            dataGridViewCuentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCuentas.Location = new Point(435, 45);
+            dataGridViewCuentas.Name = "dataGridViewCuentas";
+            dataGridViewCuentas.RowTemplate.Height = 25;
+            dataGridViewCuentas.Size = new Size(448, 260);
+            dataGridViewCuentas.TabIndex = 9;
+            dataGridViewCuentas.CellContentClick += dataGridView1_CellContentClick;
+            // 
             // FormCuenta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(464, 361);
+            ClientSize = new Size(918, 361);
+            Controls.Add(dataGridViewCuentas);
             Controls.Add(cboTipoCuenta);
             Controls.Add(label4);
             Controls.Add(buttonGuardarCuenta);
@@ -126,6 +139,8 @@
             Controls.Add(label1);
             Name = "FormCuenta";
             Text = "Form1";
+            Load += FormCuenta_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCuentas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -140,5 +155,6 @@
         private Button buttonGuardarCuenta;
         private Label label4;
         private ComboBox cboTipoCuenta;
+        private DataGridView dataGridViewCuentas;
     }
 }

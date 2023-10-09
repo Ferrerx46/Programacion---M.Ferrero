@@ -101,6 +101,7 @@
             Controls.Add(label1);
             Name = "FormDeposito";
             Text = "FormDeposito";
+            Load += FormDeposito_Load;
             ResumeLayout(false);
             PerformLayout();
         }

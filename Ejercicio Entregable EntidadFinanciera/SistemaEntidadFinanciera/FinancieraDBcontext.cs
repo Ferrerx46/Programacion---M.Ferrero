@@ -17,20 +17,20 @@ namespace SistemaEntidadFinanciera
         {
             optionsBuilder.UseSqlServer("server = LAPTOP-TI84IK3Q\\SQLEXPRESS; database = EntidadFinanciera; trusted_connection = true; Encrypt = False");
         }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Cliente>().HasData(new Cliente
-            {
-                ID = 1,
-                Nombre = "Mateo",
-                Apellido = "Ferrero",
-                DNI = 454545
-            });
-            base.OnModelCreating(modelBuilder);
-        }
+        /* protected override void OnModelCreating(ModelBuilder modelBuilder)
+         {
+             modelBuilder.Entity<Cliente>().HasData(new Cliente
+             {
+                 ID = 1,
+                 Nombre = "Mateo",
+                 Apellido = "Ferrero",
+                 DNI = 454545
+             });
+             base.OnModelCreating(modelBuilder);
+         }*/
     }
 
-   
 
-   
+
+
 }

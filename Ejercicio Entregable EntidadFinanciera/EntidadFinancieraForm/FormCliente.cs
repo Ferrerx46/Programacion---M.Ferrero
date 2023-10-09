@@ -1,4 +1,5 @@
-﻿using SistemaEntidadFinanciera;
+﻿using Microsoft.EntityFrameworkCore;
+using SistemaEntidadFinanciera;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +22,9 @@ namespace EntidadFinancieraForm
 
         private void FormCliente_Load(object sender, EventArgs e)
         {
-
+            Principal._contexto.Clientes.Load();
+            dataGridViewClientes.DataSource = null;
+            dataGridViewClientes.DataSource = Principal._contexto.Clientes.Local.ToBindingList();
         }
 
         private void buttonGuardar_Click(object sender, EventArgs e)

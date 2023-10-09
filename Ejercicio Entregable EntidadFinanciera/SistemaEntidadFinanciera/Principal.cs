@@ -9,17 +9,12 @@ namespace SistemaEntidadFinanciera
 {
     public class Principal
     {
-
-
-         public static FinancieraDBcontext  _contexto = new FinancieraDBcontext();
-        
-
-
+        public static FinancieraDBcontext  _contexto = new FinancieraDBcontext();
+     
         public static void AgregarCliente(string nombre, string apellido, int dni)
         {
             Cliente ClienteNuevo = new Cliente
             {
-                ID= 2,
                 Nombre = nombre,
                 Apellido = apellido,
                 DNI = dni
@@ -45,7 +40,7 @@ namespace SistemaEntidadFinanciera
             }
         }
 
-        public static string EmitirTarjetaCredito(int clienteId, int numeroTarjeta, decimal limiteCredito)
+        public static string EmitirTarjetaCredito(int numeroTarjeta, decimal limiteCredito)
         {
             TarjetaCredito tarjetaNueva = new TarjetaCredito
             {
@@ -59,9 +54,9 @@ namespace SistemaEntidadFinanciera
             return "Tarjeta de crédito emitida con éxito.";
         }
 
-        public static string PausarTarjetaCredito(int tarjetaId)
+        public static string PausarTarjetaCredito(int numeroTarjeta)
         {
-            TarjetaCredito? tarjeta = _contexto.TarjetasCredito.Find(tarjetaId);
+            TarjetaCredito? tarjeta = _contexto.TarjetasCredito.Where(x => x.NumeroTarjeta == numeroTarjeta) as TarjetaCredito;
 
             if (tarjeta != null)
             {
@@ -69,7 +64,7 @@ namespace SistemaEntidadFinanciera
                 {
                     tarjeta.Estado = "Pausada";
                     _contexto.SaveChanges();
-                    return "SE ha pasusado ";
+                    return "Se ha pasusado ";
                 }
                 else
                 {
@@ -82,10 +77,11 @@ namespace SistemaEntidadFinanciera
             }
         }
 
-        public static string RealizarDeposito(int cuentaID, decimal monto)
+        public static string RealizarDeposito(int numeroCuenta, decimal monto)
         {
-            CuentaBancaria? cuenta = _contexto.CuentasBancarias.Find(cuentaID);
 
+            //CuentaBancaria? cuenta = _contexto.CuentasBancarias.Where(x => x.NumeroCuenta == numeroCuenta) as CuentaBancaria;
+            CuentaBancaria? cuenta = _contexto.CuentasBancarias.First<CuentaBancaria>(x => x.NumeroCuenta == numeroCuenta);
             if (cuenta != null)
             {
                 cuenta.Saldo += monto;
@@ -98,9 +94,9 @@ namespace SistemaEntidadFinanciera
             };
         }
 
-        public static string RealizarExtraccion(int cuentaID, decimal monto)
+        public static string RealizarExtraccion(int numeroCuenta, decimal monto)
         {
-            CuentaBancaria? cuenta = _contexto.CuentasBancarias.Find(cuentaID);
+            CuentaBancaria? cuenta = _contexto.CuentasBancarias.First<CuentaBancaria>(x => x.NumeroCuenta == numeroCuenta);
             if (cuenta != null)
             {
                 if (cuenta.Saldo >= monto)
@@ -121,17 +117,17 @@ namespace SistemaEntidadFinanciera
 
         }
         
-        public static string RealizarTransferencia(int CuentaOrigenID, int CuentaDestinoID, decimal monto)
+        public static string RealizarTransferencia(int cuentaOrigenNumero, int cuentaDestinoNumero, decimal monto)
         {
-            CuentaBancaria? CuentaOrigen = _contexto.CuentasBancarias.Find(CuentaOrigenID);
-            CuentaBancaria? CuentaDestino = _contexto.CuentasBancarias.Find(CuentaDestinoID);
+            CuentaBancaria? cuentaOrigen = _contexto.CuentasBancarias.First<CuentaBancaria>(x => x.NumeroCuenta == cuentaOrigenNumero);
+            CuentaBancaria? cuentaDestino = _contexto.CuentasBancarias.First<CuentaBancaria>(x => x.NumeroCuenta == cuentaDestinoNumero);
 
-            if (CuentaOrigen != null && CuentaDestino != null)
+            if (cuentaOrigen != null && cuentaDestino != null)
             {
-                if (CuentaOrigen.Saldo >= monto)
+                if (cuentaOrigen.Saldo >= monto)
                 {
-                    CuentaOrigen.Saldo -= monto;
-                    CuentaDestino.Saldo += monto;
+                    cuentaOrigen.Saldo -= monto;
+                    cuentaDestino.Saldo += monto;
                     _contexto.SaveChanges();
                     return "Transferencia realizada con exito";
                 }
@@ -142,13 +138,13 @@ namespace SistemaEntidadFinanciera
             }
             else
             {
-                 return "La cuenta no a sido encontrada"; 
+                 return "Cuenta no encontrada"; 
             }
         }
 
-       public static string PagarTarjetaCredito(int TarjetaID, decimal MontoPago)
+       public static string PagarTarjetaCredito(int numeroTarjeta, decimal MontoPago)
        {
-            TarjetaCredito? tarjeta = _contexto.TarjetasCredito.Find(TarjetaID);
+            TarjetaCredito? tarjeta = _contexto.TarjetasCredito.Where(x => x.NumeroTarjeta == numeroTarjeta) as TarjetaCredito;
 
             if (tarjeta != null)
             {
@@ -174,6 +170,29 @@ namespace SistemaEntidadFinanciera
             }
 
        }
+
+        public static string GenerarResumen(int tarjetaCreditoID)
+        {
+            TarjetaCredito? tarjeta = _contexto.TarjetasCredito.Find(tarjetaCreditoID);
+            if (tarjeta != null)
+            {
+                StringBuilder ret =  new StringBuilder();
+
+                ret.AppendLine("Resumen de la tarjeta");
+                ret.AppendLine("Numero de la tarjeta: " + tarjeta.NumeroTarjeta);
+                ret.AppendLine("Limite de credito: " + tarjeta.LimiteCredito);
+                ret.AppendLine("Saldo disponible: " + tarjeta.SaldoDisponible);
+                ret.AppendLine("El estado es: " + tarjeta.Estado);
+                ret.AppendLine("La deuda es de: " + tarjeta.MontoDeuda);
+
+                return ret.ToString();
+            }
+            return "Error";
+        }
+        public List<TarjetaCredito>ListaRetornarTarjeta()
+        {
+            return _contexto.TarjetasCredito.ToList();
+        }
 
         public void Dispose()
         {

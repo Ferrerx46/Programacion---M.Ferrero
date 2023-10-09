@@ -36,6 +36,8 @@
             txtDNI = new TextBox();
             buttonGuardar = new Button();
             label5 = new Label();
+            dataGridViewClientes = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -109,11 +111,21 @@
             label5.TabIndex = 9;
             label5.Text = "Ingrese un Cliente";
             // 
+            // dataGridViewClientes
+            // 
+            dataGridViewClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewClientes.Location = new Point(471, 38);
+            dataGridViewClientes.Name = "dataGridViewClientes";
+            dataGridViewClientes.RowTemplate.Height = 25;
+            dataGridViewClientes.Size = new Size(409, 242);
+            dataGridViewClientes.TabIndex = 10;
+            // 
             // FormCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(521, 393);
+            ClientSize = new Size(924, 393);
+            Controls.Add(dataGridViewClientes);
             Controls.Add(label5);
             Controls.Add(buttonGuardar);
             Controls.Add(txtDNI);
@@ -125,6 +137,7 @@
             Name = "FormCliente";
             Text = "Form2";
             Load += FormCliente_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -141,5 +154,6 @@
         private TextBox textBox4;
         private Button buttonGuardar;
         private Label label5;
+        private DataGridView dataGridViewClientes;
     }
 }

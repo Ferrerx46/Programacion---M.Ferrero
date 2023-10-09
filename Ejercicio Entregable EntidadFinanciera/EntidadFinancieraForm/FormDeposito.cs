@@ -1,4 +1,5 @@
-﻿using SistemaEntidadFinanciera;
+﻿using Microsoft.EntityFrameworkCore;
+using SistemaEntidadFinanciera;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,19 +22,26 @@ namespace EntidadFinancieraForm
 
         private void buttonDepositar_Click(object sender, EventArgs e)
         {
-            int cuentaID;
+            int numeroCuenta;
             decimal monto;
 
-            if (!int.TryParse(txtNumeroCuenta.Text, out cuentaID) || !decimal.TryParse(txtMonto.Text, out monto) || monto <= 0)
+            if (!int.TryParse(txtNumeroCuenta.Text, out numeroCuenta) || !decimal.TryParse(txtMonto.Text, out monto) || monto <= 0)
             {
                 MessageBox.Show("Ingrese un número de cuenta válido y un monto mayor que cero.");
                 return;
             }
 
-            string resultado = Principal.RealizarDeposito(cuentaID, monto);
+            string resultado = Principal.RealizarDeposito(numeroCuenta, monto);
             MessageBox.Show(resultado);
 
             this.Close();
+        }
+
+        private void FormDeposito_Load(object sender, EventArgs e)
+        {
+            Principal._contexto.CuentasBancarias.Load();
+
+
         }
     }
 }

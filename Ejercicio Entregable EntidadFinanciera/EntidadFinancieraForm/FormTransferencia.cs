@@ -21,17 +21,17 @@ namespace EntidadFinancieraForm
 
         private void buttonTransferir_Click(object sender, EventArgs e)
         {
-            int cuentaOrigenID;
-            int cuentaDestinoID;
+            int cuentaOrigenNumero;
+            int cuentaDestinoNumero;
             decimal monto;
 
-            if (!int.TryParse(txtOrigen.Text, out cuentaOrigenID) || !int.TryParse(txtDestino.Text, out cuentaDestinoID) || !decimal.TryParse(txtMonto.Text, out monto) || monto <= 0)
+            if (!int.TryParse(txtOrigen.Text, out cuentaOrigenNumero) || !int.TryParse(txtDestino.Text, out cuentaDestinoNumero) || !decimal.TryParse(txtMonto.Text, out monto) || monto <= 0)
             {
                 MessageBox.Show("Ingrese números de cuenta válidos y un monto mayor que cero.");
                 return;
             }
 
-            string resultado = Principal.RealizarTransferencia(cuentaOrigenID, cuentaDestinoID, monto);
+            string resultado = Principal.RealizarTransferencia(cuentaOrigenNumero, cuentaDestinoNumero, monto);
             MessageBox.Show(resultado);
 
             this.Close();

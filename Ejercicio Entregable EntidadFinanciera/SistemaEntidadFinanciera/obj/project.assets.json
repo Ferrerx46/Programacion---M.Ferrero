@@ -2861,11 +2861,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mateo\\source\\repos\\SistemaEntidadFinanciera\\SistemaEntidadFinanciera.csproj",
+      "projectUniqueName": "C:\\Users\\mateo\\OneDrive\\Documentos\\GitHub\\Programacion-1-M.Ferrero\\Ejercicio Entregable EntidadFinanciera\\SistemaEntidadFinanciera\\SistemaEntidadFinanciera.csproj",
       "projectName": "SistemaEntidadFinanciera",
-      "projectPath": "C:\\Users\\mateo\\source\\repos\\SistemaEntidadFinanciera\\SistemaEntidadFinanciera.csproj",
+      "projectPath": "C:\\Users\\mateo\\OneDrive\\Documentos\\GitHub\\Programacion-1-M.Ferrero\\Ejercicio Entregable EntidadFinanciera\\SistemaEntidadFinanciera\\SistemaEntidadFinanciera.csproj",
       "packagesPath": "C:\\Users\\mateo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mateo\\source\\repos\\SistemaEntidadFinanciera\\obj\\",
+      "outputPath": "C:\\Users\\mateo\\OneDrive\\Documentos\\GitHub\\Programacion-1-M.Ferrero\\Ejercicio Entregable EntidadFinanciera\\SistemaEntidadFinanciera\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
