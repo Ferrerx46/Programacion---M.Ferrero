@@ -11,9 +11,10 @@ namespace SistemaEntidadFinanciera
     {
         [Key]
         public int CuentaID { get; set; }
-        public int NumeroCuenta { get; set; }
+        public long NumeroCuenta { get; set; }
         public decimal Saldo { get; set; }
         public string? Tipo { get; set; } // ´´Corriente´´ o ´´Ahorro´´
+
 
     }
 }

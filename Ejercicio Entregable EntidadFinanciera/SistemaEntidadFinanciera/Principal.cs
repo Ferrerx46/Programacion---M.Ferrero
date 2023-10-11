@@ -25,20 +25,43 @@ namespace SistemaEntidadFinanciera
 
         }
 
-        public static void CrearCuentaBancaria( int numeroCuenta, decimal saldo, string tipo)
+        public static void CrearCuentaBancaria(decimal saldo, string tipo, int dni)
         {
+            long numeroCuenta = GenerarNumeroCuenta(tipo, dni);
+
+            CuentaBancaria nuevaCuenta = new CuentaBancaria
             {
-                CuentaBancaria nuevaCuenta = new CuentaBancaria
-                { 
-                    NumeroCuenta = numeroCuenta,
-                    Saldo = saldo,
-                    Tipo = tipo
-                };
-                   
-                _contexto.CuentasBancarias.Add(nuevaCuenta);
-                _contexto.SaveChanges();
-            }
+                NumeroCuenta = numeroCuenta,
+                Saldo = saldo,
+                Tipo = tipo
+            };
+
+            _contexto.CuentasBancarias.Add(nuevaCuenta);
+            _contexto.SaveChanges();
         }
+
+        private static long GenerarNumeroCuenta(string tipo, int dni)
+        {
+            Random random = new Random();
+            //string numeroCuenta = CuentaAhorro ? "00" : "01"; 
+            Int64 numeroCuenta = 0;
+            string randomV = "";
+            for (int i = 0; i < 12; i++)
+            {
+                randomV += random.Next(0, 9).ToString();
+            }
+
+            if (tipo == "Ahorro")
+            {
+                numeroCuenta = Int64.Parse("00" + dni.ToString() + randomV);
+            }
+            else
+            {
+                numeroCuenta = Int64.Parse("01" + dni.ToString() + randomV);
+            }
+            return numeroCuenta;
+        }
+
 
         public static string EmitirTarjetaCredito(int numeroTarjeta, decimal limiteCredito)
         {
@@ -56,7 +79,7 @@ namespace SistemaEntidadFinanciera
 
         public static string PausarTarjetaCredito(int numeroTarjeta)
         {
-            TarjetaCredito? tarjeta = _contexto.TarjetasCredito.Where(x => x.NumeroTarjeta == numeroTarjeta) as TarjetaCredito;
+            TarjetaCredito? tarjeta = _contexto.TarjetasCredito.First<TarjetaCredito>(x => x.NumeroTarjeta == numeroTarjeta);
 
             if (tarjeta != null)
             {
@@ -144,7 +167,7 @@ namespace SistemaEntidadFinanciera
 
        public static string PagarTarjetaCredito(int numeroTarjeta, decimal MontoPago)
        {
-            TarjetaCredito? tarjeta = _contexto.TarjetasCredito.Where(x => x.NumeroTarjeta == numeroTarjeta) as TarjetaCredito;
+            TarjetaCredito? tarjeta = _contexto.TarjetasCredito.First<TarjetaCredito>(x => x.NumeroTarjeta == numeroTarjeta);
 
             if (tarjeta != null)
             {

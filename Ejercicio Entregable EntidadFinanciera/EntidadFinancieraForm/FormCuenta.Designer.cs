@@ -28,33 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            txtNumeroCuenta = new TextBox();
             txtSaldo = new TextBox();
             buttonGuardarCuenta = new Button();
             label4 = new Label();
             cboTipoCuenta = new ComboBox();
             dataGridViewCuentas = new DataGridView();
+            label1 = new Label();
+            txtDNI = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCuentas).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(12, 95);
-            label1.Name = "label1";
-            label1.Size = new Size(169, 25);
-            label1.TabIndex = 0;
-            label1.Text = "Numero de cuenta";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(62, 155);
+            label2.Location = new Point(62, 96);
             label2.Name = "label2";
             label2.Size = new Size(59, 25);
             label2.TabIndex = 1;
@@ -64,22 +54,15 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(62, 213);
+            label3.Location = new Point(62, 151);
             label3.Name = "label3";
             label3.Size = new Size(49, 25);
             label3.TabIndex = 2;
             label3.Text = "Tipo";
             // 
-            // txtNumeroCuenta
-            // 
-            txtNumeroCuenta.Location = new Point(218, 100);
-            txtNumeroCuenta.Name = "txtNumeroCuenta";
-            txtNumeroCuenta.Size = new Size(192, 23);
-            txtNumeroCuenta.TabIndex = 3;
-            // 
             // txtSaldo
             // 
-            txtSaldo.Location = new Point(218, 160);
+            txtSaldo.Location = new Point(175, 96);
             txtSaldo.Name = "txtSaldo";
             txtSaldo.Size = new Size(192, 23);
             txtSaldo.TabIndex = 4;
@@ -108,7 +91,7 @@
             // 
             cboTipoCuenta.FormattingEnabled = true;
             cboTipoCuenta.Items.AddRange(new object[] { "Ahorro", "Corriente" });
-            cboTipoCuenta.Location = new Point(218, 215);
+            cboTipoCuenta.Location = new Point(175, 151);
             cboTipoCuenta.Name = "cboTipoCuenta";
             cboTipoCuenta.Size = new Size(192, 23);
             cboTipoCuenta.TabIndex = 8;
@@ -123,20 +106,37 @@
             dataGridViewCuentas.TabIndex = 9;
             dataGridViewCuentas.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(62, 202);
+            label1.Name = "label1";
+            label1.Size = new Size(44, 25);
+            label1.TabIndex = 10;
+            label1.Text = "DNI";
+            // 
+            // txtDNI
+            // 
+            txtDNI.Location = new Point(175, 207);
+            txtDNI.Name = "txtDNI";
+            txtDNI.Size = new Size(192, 23);
+            txtDNI.TabIndex = 11;
+            // 
             // FormCuenta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(918, 361);
+            Controls.Add(txtDNI);
+            Controls.Add(label1);
             Controls.Add(dataGridViewCuentas);
             Controls.Add(cboTipoCuenta);
             Controls.Add(label4);
             Controls.Add(buttonGuardarCuenta);
             Controls.Add(txtSaldo);
-            Controls.Add(txtNumeroCuenta);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Name = "FormCuenta";
             Text = "Form1";
             Load += FormCuenta_Load;
@@ -146,15 +146,14 @@
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox txtNumeroCuenta;
         private TextBox txtSaldo;
         private Button buttonGuardarCuenta;
         private Label label4;
         private ComboBox cboTipoCuenta;
         private DataGridView dataGridViewCuentas;
+        private Label label1;
+        private TextBox txtDNI;
     }
 }

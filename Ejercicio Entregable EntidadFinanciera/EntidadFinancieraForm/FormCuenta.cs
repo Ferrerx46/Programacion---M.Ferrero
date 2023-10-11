@@ -22,19 +22,22 @@ namespace EntidadFinancieraForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int numeroCuenta;
             decimal saldo;
-
-            if (!int.TryParse(txtNumeroCuenta.Text, out numeroCuenta) || !decimal.TryParse(txtSaldo.Text, out saldo))
+            if (!decimal.TryParse(txtSaldo.Text, out saldo))
             {
-                MessageBox.Show("Ingrese un numero de cuenta y saldo validos");
+                MessageBox.Show("Ingrese un saldo válido.");
                 return;
             }
             string tipo = cboTipoCuenta.SelectedItem.ToString();
+            int dniCliente;
+            if (!int.TryParse(txtDNI.Text, out dniCliente))
+            {
+                MessageBox.Show("Ingrese un DNI válido.");
+                return;
+            }
 
-            Principal.CrearCuentaBancaria(numeroCuenta, saldo, tipo);
-            MessageBox.Show("Cuenta creada con exito");
-
+            Principal.CrearCuentaBancaria(saldo, tipo, dniCliente);
+            MessageBox.Show("La cuenta ha sido creada con exito", "Exito");
             this.Close();
         }
 
