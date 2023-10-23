@@ -22,19 +22,23 @@ namespace EntidadFinancieraForm
 
         private void buttonDepositar_Click(object sender, EventArgs e)
         {
-            int numeroCuenta;
+            string numeroCuenta = txtNumeroCuenta.Text;
             decimal monto;
-
-            if (!int.TryParse(txtNumeroCuenta.Text, out numeroCuenta) || !decimal.TryParse(txtMonto.Text, out monto) || monto <= 0)
+            
+            if (decimal.TryParse(txtMonto.Text, out monto))
             {
-                MessageBox.Show("Ingrese un número de cuenta válido y un monto mayor que cero.");
-                return;
+                if (monto <= 0)
+                {
+                    MessageBox.Show("Ingrese un número de cuenta válido y un monto mayor que cero.");
+                    return;
+                }
+
+                string resultado = Principal.RealizarDeposito(numeroCuenta, monto);
+                MessageBox.Show(resultado);
+
+                this.Close();
             }
-
-            string resultado = Principal.RealizarDeposito(numeroCuenta, monto);
-            MessageBox.Show(resultado);
-
-            this.Close();
+ 
         }
 
         private void FormDeposito_Load(object sender, EventArgs e)

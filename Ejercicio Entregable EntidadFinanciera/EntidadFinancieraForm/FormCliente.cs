@@ -44,5 +44,19 @@ namespace EntidadFinancieraForm
 
             this.Close();
         }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtDNI.Text, out int dni)) 
+            {
+                string resultado = Principal.EliminarCliente(dni); 
+
+                MessageBox.Show(resultado); 
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un DNI válido."); 
+            }
+        }
     }
 }

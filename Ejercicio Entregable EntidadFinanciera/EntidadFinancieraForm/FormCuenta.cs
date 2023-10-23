@@ -38,7 +38,7 @@ namespace EntidadFinancieraForm
 
             Principal.CrearCuentaBancaria(saldo, tipo, dniCliente);
             MessageBox.Show("La cuenta ha sido creada con exito", "Exito");
-            this.Close();
+
         }
 
         private void FormCuenta_Load(object sender, EventArgs e)
@@ -52,6 +52,13 @@ namespace EntidadFinancieraForm
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            string numeroCuenta = txtNumero.Text;
+            string resultado = Principal.EliminarCuenta(numeroCuenta);
+            MessageBox.Show(resultado);
         }
     }
 }

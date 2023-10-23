@@ -37,6 +37,7 @@
             buttonGuardar = new Button();
             label5 = new Label();
             dataGridViewClientes = new DataGridView();
+            buttonEliminar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).BeginInit();
             SuspendLayout();
             // 
@@ -93,7 +94,7 @@
             // 
             // buttonGuardar
             // 
-            buttonGuardar.Location = new Point(224, 326);
+            buttonGuardar.Location = new Point(88, 329);
             buttonGuardar.Name = "buttonGuardar";
             buttonGuardar.Size = new Size(75, 23);
             buttonGuardar.TabIndex = 8;
@@ -120,11 +121,22 @@
             dataGridViewClientes.Size = new Size(409, 242);
             dataGridViewClientes.TabIndex = 10;
             // 
+            // buttonEliminar
+            // 
+            buttonEliminar.Location = new Point(279, 329);
+            buttonEliminar.Name = "buttonEliminar";
+            buttonEliminar.Size = new Size(75, 23);
+            buttonEliminar.TabIndex = 11;
+            buttonEliminar.Text = "Eliminar";
+            buttonEliminar.UseVisualStyleBackColor = true;
+            buttonEliminar.Click += buttonEliminar_Click;
+            // 
             // FormCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(924, 393);
+            Controls.Add(buttonEliminar);
             Controls.Add(dataGridViewClientes);
             Controls.Add(label5);
             Controls.Add(buttonGuardar);
@@ -155,5 +167,6 @@
         private Button buttonGuardar;
         private Label label5;
         private DataGridView dataGridViewClientes;
+        private Button buttonEliminar;
     }
 }

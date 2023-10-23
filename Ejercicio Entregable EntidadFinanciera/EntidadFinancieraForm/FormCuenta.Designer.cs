@@ -37,6 +37,9 @@
             dataGridViewCuentas = new DataGridView();
             label1 = new Label();
             txtDNI = new TextBox();
+            txtNumero = new TextBox();
+            label5 = new Label();
+            buttonEliminar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCuentas).BeginInit();
             SuspendLayout();
             // 
@@ -123,11 +126,41 @@
             txtDNI.Size = new Size(192, 23);
             txtDNI.TabIndex = 11;
             // 
+            // txtNumero
+            // 
+            txtNumero.Location = new Point(666, 322);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(192, 23);
+            txtNumero.TabIndex = 12;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(472, 322);
+            label5.Name = "label5";
+            label5.Size = new Size(169, 25);
+            label5.TabIndex = 13;
+            label5.Text = "Numero de cuenta";
+            // 
+            // buttonEliminar
+            // 
+            buttonEliminar.Location = new Point(627, 366);
+            buttonEliminar.Name = "buttonEliminar";
+            buttonEliminar.Size = new Size(75, 23);
+            buttonEliminar.TabIndex = 14;
+            buttonEliminar.Text = "Eliminar";
+            buttonEliminar.UseVisualStyleBackColor = true;
+            buttonEliminar.Click += buttonEliminar_Click;
+            // 
             // FormCuenta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(918, 361);
+            ClientSize = new Size(918, 401);
+            Controls.Add(buttonEliminar);
+            Controls.Add(label5);
+            Controls.Add(txtNumero);
             Controls.Add(txtDNI);
             Controls.Add(label1);
             Controls.Add(dataGridViewCuentas);
@@ -155,5 +188,8 @@
         private DataGridView dataGridViewCuentas;
         private Label label1;
         private TextBox txtDNI;
+        private TextBox txtNumero;
+        private Label label5;
+        private Button buttonEliminar;
     }
 }

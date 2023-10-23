@@ -1,4 +1,5 @@
-﻿using SistemaEntidadFinanciera;
+﻿using Microsoft.EntityFrameworkCore;
+using SistemaEntidadFinanciera;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,59 +21,53 @@ namespace EntidadFinancieraForm
 
         private void buttonEmitir_Click(object sender, EventArgs e)
         {
-            int numeroTarjeta;
+            int dniCliente;
             decimal limiteCredito;
 
-            if (int.TryParse(txtNumero.Text, out numeroTarjeta) || !decimal.TryParse(txtLimite.Text, out limiteCredito))
+            if (!int.TryParse(txtDNI.Text, out dniCliente))
+            {
+                MessageBox.Show("Ingrese un DNI válido.");
+                return;
+            }
+            if (decimal.TryParse(txtLimite.Text, out limiteCredito))
             {
                 MessageBox.Show("Ingrese valores válidos para el número de tarjeta y el límite de crédito.");
                 return;
             }
 
-            string resultado = Principal.EmitirTarjetaCredito(numeroTarjeta, limiteCredito);
+            string resultado = Principal.EmitirTarjetaCredito(dniCliente, limiteCredito);
             MessageBox.Show(resultado);
         }
 
         private void buttonPausar_Click(object sender, EventArgs e)
         {
-            int numeroTarjeta;
 
-            if (!int.TryParse(txtNumero.Text, out numeroTarjeta))
-            {
-                MessageBox.Show("Ingrese un numero de tarjeta valida.");
-                return;
-            }
 
-            string resultado = Principal.PausarTarjetaCredito(numeroTarjeta);
+
+
+            string resultado = Principal.PausarTarjetaCredito(txtNumeroTarjeta.Text);
             MessageBox.Show(resultado);
         }
 
         private void buttonPagar_Click(object sender, EventArgs e)
         {
-            int numeroTarjeta;
+            string numeroTarjeta = txtNumeroTarjeta.Text;
             decimal montoPago;
 
-            if (int.TryParse(txtNumero.Text, out numeroTarjeta) || !decimal.TryParse(txtMonto.Text, out montoPago))
+            if (!decimal.TryParse(txtMonto.Text, out montoPago))
             {
                 MessageBox.Show("Ingrese valores validos para el numero de tarjeta y el monto.");
                 return;
             }
 
-            string resultado = Principal.PagarTarjetaCredito(numeroTarjeta,montoPago);
+            string resultado = Principal.PagarTarjetaCredito(numeroTarjeta, montoPago);
             MessageBox.Show(resultado);
         }
 
         private void buttonResumen_Click(object sender, EventArgs e)
         {
-            int tarjetaCreditoID;
 
-            if (!int.TryParse(txtNumero.Text, out tarjetaCreditoID))
-            {
-                MessageBox.Show("Ingrese un número de tarjeta válido.");
-                return;
-            }
-
-            string resumen = Principal.GenerarResumen(tarjetaCreditoID);
+            string resumen = Principal.GenerarResumen(txtNumeroTarjeta.Text);
 
             if (resumen != "Tarjeta no encontrada")
             {
@@ -82,6 +77,23 @@ namespace EntidadFinancieraForm
             {
                 MessageBox.Show("Tarjeta de crédito no encontrada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewCuentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FormTarjeta_Load(object sender, EventArgs e)
+        {
+            Principal._contexto.TarjetasCredito.Load();
+            dataGridViewCuentas.DataSource = null;
+            dataGridViewCuentas.DataSource = Principal._contexto.TarjetasCredito.Local.ToBindingList();
         }
     }
 }

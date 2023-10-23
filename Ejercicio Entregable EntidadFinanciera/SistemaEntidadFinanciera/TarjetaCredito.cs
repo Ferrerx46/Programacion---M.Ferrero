@@ -11,13 +11,13 @@ namespace SistemaEntidadFinanciera
     {
         [Key]
         public int TarjetaID { get; set; }
-        public int NumeroTarjeta { get; set; }
+        public string? NumeroTarjeta { get; set; }
         public decimal LimiteCredito { get; set; }
         public decimal SaldoDisponible { get; set; }
         public string? Estado { get; set; }// "Activa", "Pausada" o "Bloqueada"
         public decimal MontoDeuda { get; set; } 
 
-        public void PagarTarjeta(decimal montoPago)
+        /*public void PagarTarjeta(decimal montoPago)
         {
             if (montoPago <= 0)
             {
@@ -33,7 +33,7 @@ namespace SistemaEntidadFinanciera
 
             SaldoDisponible += montoPago;
             MontoDeuda -= montoPago;
-        }
+        }*/
 
     }
 }

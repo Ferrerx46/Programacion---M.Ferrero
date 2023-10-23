@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaEntidadFinanciera;
 
@@ -10,9 +11,11 @@ using SistemaEntidadFinanciera;
 namespace SistemaEntidadFinanciera.Migrations
 {
     [DbContext(typeof(FinancieraDBcontext))]
-    partial class FinancieraDBcontextModelSnapshot : ModelSnapshot
+    [Migration("20231018205508_migracion3")]
+    partial class migracion3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,8 +54,8 @@ namespace SistemaEntidadFinanciera.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CuentaID"));
 
-                    b.Property<string>("NumeroCuenta")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<long>("NumeroCuenta")
+                        .HasColumnType("bigint");
 
                     b.Property<decimal>("Saldo")
                         .HasColumnType("decimal(18,2)");

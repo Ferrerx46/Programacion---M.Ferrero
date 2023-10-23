@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -25,9 +26,26 @@ namespace SistemaEntidadFinanciera
 
         }
 
+        public static string EliminarCliente(int dni)
+        {
+            Cliente? cliente = _contexto.Clientes.First<Cliente>(x => x.DNI == dni);
+
+            if (cliente != null)
+            {
+                _contexto.Clientes.Remove(cliente);
+                _contexto.SaveChanges();
+
+                return "Cliente eliminado con exito";
+            }
+            else
+            {
+                return "Cliente no encontrada";
+            }
+        }
+
         public static void CrearCuentaBancaria(decimal saldo, string tipo, int dni)
         {
-            long numeroCuenta = GenerarNumeroCuenta(tipo, dni);
+            string numeroCuenta = GenerarNumeroCuenta(tipo, dni);
 
             CuentaBancaria nuevaCuenta = new CuentaBancaria
             {
@@ -40,11 +58,11 @@ namespace SistemaEntidadFinanciera
             _contexto.SaveChanges();
         }
 
-        private static long GenerarNumeroCuenta(string tipo, int dni)
+        private static string GenerarNumeroCuenta(string tipo, int dni)
         {
             Random random = new Random();
             //string numeroCuenta = CuentaAhorro ? "00" : "01"; 
-            Int64 numeroCuenta = 0;
+            string numeroCuenta;
             string randomV = "";
             for (int i = 0; i < 12; i++)
             {
@@ -53,18 +71,35 @@ namespace SistemaEntidadFinanciera
 
             if (tipo == "Ahorro")
             {
-                numeroCuenta = Int64.Parse("00" + dni.ToString() + randomV);
+                numeroCuenta = ("00" + dni.ToString() + randomV);
             }
             else
             {
-                numeroCuenta = Int64.Parse("01" + dni.ToString() + randomV);
+                numeroCuenta = ("01" + dni.ToString() + randomV);
             }
             return numeroCuenta;
         }
 
-
-        public static string EmitirTarjetaCredito(int numeroTarjeta, decimal limiteCredito)
+        public static string EliminarCuenta(string numeroCuenta)
         {
+            CuentaBancaria? cuenta = _contexto.CuentasBancarias.FirstOrDefault<CuentaBancaria>(x => x.NumeroCuenta == numeroCuenta);
+
+            if (cuenta != null)
+            {
+                _contexto.CuentasBancarias.Remove(cuenta);
+                _contexto.SaveChanges();
+
+                return "Cuenta eliminada con exito";
+            }
+            else
+            {
+                return "Cuenta no encontrada";
+            }
+        }
+
+        public static string EmitirTarjetaCredito(int dni, decimal limiteCredito)
+        {
+            string numeroTarjeta = GenerarNumeroTarjeta(dni);
             TarjetaCredito tarjetaNueva = new TarjetaCredito
             {
                NumeroTarjeta = numeroTarjeta,
@@ -76,8 +111,19 @@ namespace SistemaEntidadFinanciera
             _contexto.SaveChanges();
             return "Tarjeta de crédito emitida con éxito.";
         }
+        public static string GenerarNumeroTarjeta(int dni)
+        {
+            Random random = new Random();
+            string numeroTarjeta = "4" + dni.ToString("D11");
 
-        public static string PausarTarjetaCredito(int numeroTarjeta)
+            for (int i = 0; i < 4; i++) 
+            {
+                numeroTarjeta += random.Next(0, 10).ToString();
+            }
+            return numeroTarjeta;
+        }
+
+        public static string PausarTarjetaCredito(string numeroTarjeta)
         {
             TarjetaCredito? tarjeta = _contexto.TarjetasCredito.First<TarjetaCredito>(x => x.NumeroTarjeta == numeroTarjeta);
 
@@ -100,11 +146,11 @@ namespace SistemaEntidadFinanciera
             }
         }
 
-        public static string RealizarDeposito(int numeroCuenta, decimal monto)
+        public static string RealizarDeposito(string numeroCuenta, decimal monto)
         {
 
             //CuentaBancaria? cuenta = _contexto.CuentasBancarias.Where(x => x.NumeroCuenta == numeroCuenta) as CuentaBancaria;
-            CuentaBancaria? cuenta = _contexto.CuentasBancarias.First<CuentaBancaria>(x => x.NumeroCuenta == numeroCuenta);
+            CuentaBancaria? cuenta = _contexto.CuentasBancarias.FirstOrDefault<CuentaBancaria>(x => x.NumeroCuenta == numeroCuenta);
             if (cuenta != null)
             {
                 cuenta.Saldo += monto;
@@ -117,9 +163,9 @@ namespace SistemaEntidadFinanciera
             };
         }
 
-        public static string RealizarExtraccion(int numeroCuenta, decimal monto)
+        public static string RealizarExtraccion(string numeroCuenta, decimal monto)
         {
-            CuentaBancaria? cuenta = _contexto.CuentasBancarias.First<CuentaBancaria>(x => x.NumeroCuenta == numeroCuenta);
+            CuentaBancaria? cuenta = _contexto.CuentasBancarias.FirstOrDefault<CuentaBancaria>(x => x.NumeroCuenta == numeroCuenta);
             if (cuenta != null)
             {
                 if (cuenta.Saldo >= monto)
@@ -140,10 +186,10 @@ namespace SistemaEntidadFinanciera
 
         }
         
-        public static string RealizarTransferencia(int cuentaOrigenNumero, int cuentaDestinoNumero, decimal monto)
+        public static string RealizarTransferencia(string cuentaOrigenNumero, string cuentaDestinoNumero, decimal monto)
         {
-            CuentaBancaria? cuentaOrigen = _contexto.CuentasBancarias.First<CuentaBancaria>(x => x.NumeroCuenta == cuentaOrigenNumero);
-            CuentaBancaria? cuentaDestino = _contexto.CuentasBancarias.First<CuentaBancaria>(x => x.NumeroCuenta == cuentaDestinoNumero);
+            CuentaBancaria? cuentaOrigen = _contexto.CuentasBancarias.FirstOrDefault<CuentaBancaria>(x => x.NumeroCuenta == cuentaOrigenNumero);
+            CuentaBancaria? cuentaDestino = _contexto.CuentasBancarias.FirstOrDefault<CuentaBancaria>(x => x.NumeroCuenta == cuentaDestinoNumero);
 
             if (cuentaOrigen != null && cuentaDestino != null)
             {
@@ -165,7 +211,7 @@ namespace SistemaEntidadFinanciera
             }
         }
 
-       public static string PagarTarjetaCredito(int numeroTarjeta, decimal MontoPago)
+       public static string PagarTarjetaCredito(string numeroTarjeta, decimal MontoPago)
        {
             TarjetaCredito? tarjeta = _contexto.TarjetasCredito.First<TarjetaCredito>(x => x.NumeroTarjeta == numeroTarjeta);
 
@@ -194,9 +240,9 @@ namespace SistemaEntidadFinanciera
 
        }
 
-        public static string GenerarResumen(int tarjetaCreditoID)
+        public static string GenerarResumen(string numeroTarjeta)
         {
-            TarjetaCredito? tarjeta = _contexto.TarjetasCredito.Find(tarjetaCreditoID);
+            TarjetaCredito? tarjeta = _contexto.TarjetasCredito.First<TarjetaCredito>(x => x.NumeroTarjeta == numeroTarjeta);
             if (tarjeta != null)
             {
                 StringBuilder ret =  new StringBuilder();
