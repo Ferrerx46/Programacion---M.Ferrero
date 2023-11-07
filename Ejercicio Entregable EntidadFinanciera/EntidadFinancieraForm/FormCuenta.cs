@@ -28,7 +28,9 @@ namespace EntidadFinancieraForm
                 MessageBox.Show("Ingrese un saldo válido.");
                 return;
             }
+            
             string tipo = cboTipoCuenta.SelectedItem.ToString();
+            
             int dniCliente;
             if (!int.TryParse(txtDNI.Text, out dniCliente))
             {

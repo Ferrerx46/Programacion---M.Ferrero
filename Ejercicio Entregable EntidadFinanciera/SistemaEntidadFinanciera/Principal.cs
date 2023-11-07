@@ -28,7 +28,7 @@ namespace SistemaEntidadFinanciera
 
         public static string EliminarCliente(int dni)
         {
-            Cliente? cliente = _contexto.Clientes.First<Cliente>(x => x.DNI == dni);
+            Cliente? cliente = _contexto.Clientes.FirstOrDefault<Cliente>(x => x.DNI == dni);   
 
             if (cliente != null)
             {
@@ -45,14 +45,17 @@ namespace SistemaEntidadFinanciera
 
         public static void CrearCuentaBancaria(decimal saldo, string tipo, int dni)
         {
-            string numeroCuenta = GenerarNumeroCuenta(tipo, dni);
+            //string numeroCuenta = GenerarNumeroCuenta(tipo, dni);
 
             CuentaBancaria nuevaCuenta = new CuentaBancaria
             {
-                NumeroCuenta = numeroCuenta,
+                NumeroCuenta = GenerarNumeroCuenta(tipo, dni),
                 Saldo = saldo,
-                Tipo = tipo
+                Tipo = tipo,
             };
+            /*nuevaCuenta.NumeroCuenta = GenerarNumeroCuenta(tipo, dni);
+            nuevaCuenta.Saldo = saldo;
+            nuevaCuenta.Tipo = tipo;*/
 
             _contexto.CuentasBancarias.Add(nuevaCuenta);
             _contexto.SaveChanges();

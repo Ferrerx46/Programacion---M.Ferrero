@@ -27,12 +27,12 @@ namespace EntidadFinancieraForm
             if (!int.TryParse(txtDNI.Text, out dniCliente))
             {
                 MessageBox.Show("Ingrese un DNI válido.");
-                return;
+                
             }
-            if (decimal.TryParse(txtLimite.Text, out limiteCredito))
+            if (decimal.TryParse(txtLimite.Text, out limiteCredito)!)
             {
                 MessageBox.Show("Ingrese valores válidos para el número de tarjeta y el límite de crédito.");
-                return;
+                
             }
 
             string resultado = Principal.EmitirTarjetaCredito(dniCliente, limiteCredito);
