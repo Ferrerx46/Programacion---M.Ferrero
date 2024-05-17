@@ -1,0 +1,21 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "http://localhost:50146/WebServiceB.asmx"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "namespaceMappings": [
+      "*, ServiceReference1"
+    ],
+    "references": [
+      "C:\\Users\\mateo\\source\\repos\\FormRjercicioB\\bin\\Debug\\net8.0-windows\\ClassLibrary2.dll",
+      "C:\\Users\\mateo\\source\\repos\\FormRjercicioB\\bin\\Debug\\net8.0-windows\\ServidorEjercicioB.dll"
+    ],
+    "sync": true,
+    "targetFramework": "net8.0",
+    "typeReuseMode": "All"
+  }
+}

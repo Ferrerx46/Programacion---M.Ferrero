@@ -4,12 +4,12 @@ namespace FormRjercicioB
 {
     public partial class Form1 : Form
     {
-        private GYMweb servicio;
+        private ServiceReference1.WebServiceBSoapClient servicio;
 
         public Form1()
         {
             InitializeComponent();
-            servicio = new GYMweb();
+            servicio = new ServiceReference1.WebServiceBSoapClient(ServiceReference1.WebServiceBSoapClient.EndpointConfiguration.WebServiceBSoap);
         }
 
         private void buttonAgregar_Click(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace FormRjercicioB
         {
             var sinalumnos = servicio.sinAlumnos();
             listboxClases.Items.Clear();
-            foreach ( var clase in sinalumnos ) 
+            foreach (var clase in sinalumnos)
             {
                 listboxClases.Items.Add(clase);
             }

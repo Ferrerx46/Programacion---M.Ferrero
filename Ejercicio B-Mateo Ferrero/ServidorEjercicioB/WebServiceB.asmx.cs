@@ -8,16 +8,15 @@ using System.Web.Services;
 namespace ServidorEjercicioB
 {
     /// <summary>
-    /// Descripción breve de GYMweb
+    /// Descripción breve de WebServiceB
     /// </summary>
-    [WebService(Namespace = "http://Gimnacio.org/")]
+    [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // Para permitir que se llame a este servicio web desde un script, usando ASP.NET AJAX, quite la marca de comentario de la línea siguiente. 
     // [System.Web.Script.Services.ScriptService]
-    public class GYMweb : WebService
+    public class WebServiceB : System.Web.Services.WebService
     {
-
         private static Profesor profesor = new Profesor("Mateo Ferrero", "Instructor de GYM");
 
         [WebMethod]
@@ -49,3 +48,4 @@ namespace ServidorEjercicioB
         }
     }
 }
+
