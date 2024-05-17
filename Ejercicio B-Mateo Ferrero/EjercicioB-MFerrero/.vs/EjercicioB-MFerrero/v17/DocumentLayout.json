@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mateo\\source\\repos\\EjercicioB-MFerrero\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2E2D3DDF-8269-4AA8-A40E-1A3EFEFED615}|..\\FormRjercicioB\\FormRjercicioB.csproj|c:\\users\\mateo\\source\\repos\\formrjerciciob\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE0B7B02-0441-437E-A8A0-214B09C3EEE8}|..\\ServidorEjercicioB\\ServidorEjercicioB.csproj|c:\\users\\mateo\\source\\repos\\servidorejerciciob\\gymweb.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E2D3DDF-8269-4AA8-A40E-1A3EFEFED615}|..\\FormRjercicioB\\FormRjercicioB.csproj|c:\\users\\mateo\\source\\repos\\formrjerciciob\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FDEA880-D052-4B3C-80C9-61B7FC0DC287}|..\\ClassLibrary2\\ClassLibrary2.csproj|c:\\users\\mateo\\source\\repos\\classlibrary2\\calendario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FDEA880-D052-4B3C-80C9-61B7FC0DC287}|..\\ClassLibrary2\\ClassLibrary2.csproj|c:\\users\\mateo\\source\\repos\\classlibrary2\\clases.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FDEA880-D052-4B3C-80C9-61B7FC0DC287}|..\\ClassLibrary2\\ClassLibrary2.csproj|c:\\users\\mateo\\source\\repos\\classlibrary2\\profesor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54001CCB-DFD9-428A-BCAD-258F9B559E03}|..\\TestEjercicioB\\TestEjercicioB.csproj|c:\\users\\mateo\\source\\repos\\testejerciciob\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\FormRjercicioB\\Form1.cs",
+              "RelativeDocumentMoniker": "..\\FormRjercicioB\\Form1.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\FormRjercicioB\\Form1.cs",
+              "RelativeToolTip": "..\\FormRjercicioB\\Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T13:18:09.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\FormRjercicioB\\Form1.cs",
+              "RelativeDocumentMoniker": "..\\FormRjercicioB\\Form1.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\FormRjercicioB\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\FormRjercicioB\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T12:54:37.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Calendario.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\ClassLibrary2\\Calendario.cs",
+              "RelativeDocumentMoniker": "..\\ClassLibrary2\\Calendario.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\ClassLibrary2\\Calendario.cs",
+              "RelativeToolTip": "..\\ClassLibrary2\\Calendario.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T12:28:05.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Clases.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\ClassLibrary2\\Clases.cs",
+              "RelativeDocumentMoniker": "..\\ClassLibrary2\\Clases.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\ClassLibrary2\\Clases.cs",
+              "RelativeToolTip": "..\\ClassLibrary2\\Clases.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T12:27:18.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Profesor.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\ClassLibrary2\\Profesor.cs",
+              "RelativeDocumentMoniker": "..\\ClassLibrary2\\Profesor.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\ClassLibrary2\\Profesor.cs",
+              "RelativeToolTip": "..\\ClassLibrary2\\Profesor.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA1wAsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T21:01:47.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GYMweb.asmx.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\ServidorEjercicioB\\GYMweb.asmx.cs",
+              "RelativeDocumentMoniker": "..\\ServidorEjercicioB\\GYMweb.asmx.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\ServidorEjercicioB\\GYMweb.asmx.cs",
+              "RelativeToolTip": "..\\ServidorEjercicioB\\GYMweb.asmx.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACIAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T19:57:32.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\TestEjercicioB\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\TestEjercicioB\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\TestEjercicioB\\UnitTest1.cs",
+              "RelativeToolTip": "..\\TestEjercicioB\\UnitTest1.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAqwAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T13:12:24.399Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

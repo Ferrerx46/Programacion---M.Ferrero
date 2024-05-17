@@ -1,0 +1,17 @@
+C:\Users\mateo\source\repos\FormRjercicioB\bin\Debug\net8.0-windows\FormRjercicioB.exe
+C:\Users\mateo\source\repos\FormRjercicioB\bin\Debug\net8.0-windows\FormRjercicioB.deps.json
+C:\Users\mateo\source\repos\FormRjercicioB\bin\Debug\net8.0-windows\FormRjercicioB.runtimeconfig.json
+C:\Users\mateo\source\repos\FormRjercicioB\bin\Debug\net8.0-windows\FormRjercicioB.dll
+C:\Users\mateo\source\repos\FormRjercicioB\bin\Debug\net8.0-windows\FormRjercicioB.pdb
+C:\Users\mateo\source\repos\FormRjercicioB\obj\Debug\net8.0-windows\FormRjercicioB.Form1.resources
+C:\Users\mateo\source\repos\FormRjercicioB\obj\Debug\net8.0-windows\FormRjercicioB.csproj.GenerateResource.cache
+C:\Users\mateo\source\repos\FormRjercicioB\obj\Debug\net8.0-windows\FormRjercicioB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mateo\source\repos\FormRjercicioB\obj\Debug\net8.0-windows\FormRjercicioB.AssemblyInfoInputs.cache
+C:\Users\mateo\source\repos\FormRjercicioB\obj\Debug\net8.0-windows\FormRjercicioB.AssemblyInfo.cs
+C:\Users\mateo\source\repos\FormRjercicioB\obj\Debug\net8.0-windows\FormRjercicioB.csproj.CoreCompileInputs.cache
+C:\Users\mateo\source\repos\FormRjercicioB\obj\Debug\net8.0-windows\FormRjercicioB.dll
+C:\Users\mateo\source\repos\FormRjercicioB\obj\Debug\net8.0-windows\refint\FormRjercicioB.dll
+C:\Users\mateo\source\repos\FormRjercicioB\obj\Debug\net8.0-windows\FormRjercicioB.pdb
+C:\Users\mateo\source\repos\FormRjercicioB\obj\Debug\net8.0-windows\FormRjercicioB.genruntimeconfig.cache
+C:\Users\mateo\source\repos\FormRjercicioB\obj\Debug\net8.0-windows\ref\FormRjercicioB.dll
+C:\Users\mateo\source\repos\FormRjercicioB\obj\Debug\net8.0-windows\FormRjercicioB.csproj.AssemblyReference.cache

@@ -1,0 +1,11 @@
+C:\Users\mateo\source\repos\EjercicioB-MFerrero\obj\Debug\net8.0\EjercicioB-MFerrero.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mateo\source\repos\EjercicioB-MFerrero\obj\Debug\net8.0\EjercicioB-MFerrero.AssemblyInfoInputs.cache
+C:\Users\mateo\source\repos\EjercicioB-MFerrero\obj\Debug\net8.0\EjercicioB-MFerrero.AssemblyInfo.cs
+C:\Users\mateo\source\repos\EjercicioB-MFerrero\obj\Debug\net8.0\EjercicioB-MFerrero.csproj.CoreCompileInputs.cache
+C:\Users\mateo\source\repos\EjercicioB-MFerrero\bin\Debug\net8.0\EjercicioB-MFerrero.deps.json
+C:\Users\mateo\source\repos\EjercicioB-MFerrero\bin\Debug\net8.0\EjercicioB-MFerrero.dll
+C:\Users\mateo\source\repos\EjercicioB-MFerrero\bin\Debug\net8.0\EjercicioB-MFerrero.pdb
+C:\Users\mateo\source\repos\EjercicioB-MFerrero\obj\Debug\net8.0\EjercicioB-MFerrero.dll
+C:\Users\mateo\source\repos\EjercicioB-MFerrero\obj\Debug\net8.0\refint\EjercicioB-MFerrero.dll
+C:\Users\mateo\source\repos\EjercicioB-MFerrero\obj\Debug\net8.0\EjercicioB-MFerrero.pdb
+C:\Users\mateo\source\repos\EjercicioB-MFerrero\obj\Debug\net8.0\ref\EjercicioB-MFerrero.dll

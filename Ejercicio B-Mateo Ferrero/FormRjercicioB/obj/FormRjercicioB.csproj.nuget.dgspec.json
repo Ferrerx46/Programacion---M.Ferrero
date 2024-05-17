@@ -1,0 +1,113 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\mateo\\source\\repos\\FormRjercicioB\\FormRjercicioB.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\mateo\\source\\repos\\ClassLibrary2\\ClassLibrary2.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mateo\\source\\repos\\ClassLibrary2\\ClassLibrary2.csproj",
+        "projectName": "ClassLibrary2",
+        "projectPath": "C:\\Users\\mateo\\source\\repos\\ClassLibrary2\\ClassLibrary2.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\mateo\\source\\repos\\FormRjercicioB\\FormRjercicioB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mateo\\source\\repos\\FormRjercicioB\\FormRjercicioB.csproj",
+        "projectName": "FormRjercicioB",
+        "projectPath": "C:\\Users\\mateo\\source\\repos\\FormRjercicioB\\FormRjercicioB.csproj",
+        "packagesPath": "C:\\Users\\mateo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mateo\\source\\repos\\FormRjercicioB\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mateo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "C:\\Users\\mateo\\source\\repos\\ServidorEjercicioB\\ServidorEjercicioB.csproj": {
+                "projectPath": "C:\\Users\\mateo\\source\\repos\\ServidorEjercicioB\\ServidorEjercicioB.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mateo\\source\\repos\\ServidorEjercicioB\\ServidorEjercicioB.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mateo\\source\\repos\\ServidorEjercicioB\\ServidorEjercicioB.csproj",
+        "projectName": "ServidorEjercicioB",
+        "projectPath": "C:\\Users\\mateo\\source\\repos\\ServidorEjercicioB\\ServidorEjercicioB.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\mateo\\source\\repos\\ClassLibrary2\\ClassLibrary2.csproj": {
+                "projectPath": "C:\\Users\\mateo\\source\\repos\\ClassLibrary2\\ClassLibrary2.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    }
+  }
+}
